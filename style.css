@@ -1,0 +1,56 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.main {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    margin-inline-start: 10%;
+}
+
+.sidePanel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+}
+
+.container {
+    width: 700px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 640px;
+    height: 640px;
+    border: 1px solid black;
+}
+
+.gridItem {
+    aspect-ratio: 1/1;
+    border: 1 px solid rgb(215, 215, 215);
+}
+
+button {
+    border: none;
+    border-radius: 8px;
+    background-color: rgb(1, 130, 194);
+    color: aliceblue;
+    padding: 5px 10px;
+    transition: 300ms ease-out;
+}
+
+button:hover {
+    transition: 300ms ease-in;
+    padding: 10px 15px;
+    background-color: rgb(9, 171, 215);
+}
