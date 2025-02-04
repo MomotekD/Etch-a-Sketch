@@ -49,6 +49,7 @@ button {
     background-color: rgb(1, 130, 194);
     color: aliceblue;
     padding: 5px 10px;
+    margin-top: 10px;
     transition: 300ms ease-out;
 }
 
