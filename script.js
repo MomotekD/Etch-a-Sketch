@@ -1,9 +1,19 @@
 const grid = document.querySelector(".grid");
 const gridWidth = grid.clientWidth;
 let Columns = 16;
+let isDrawing = false;
 
 function getGridItemWidth(){
     return (gridWidth / Columns);
+}
+
+function startDrawing(){
+    if(isDrawing === true){
+        isDrawing = false;
+    }else{
+        console.log("Drawing");
+        isDrawing = true;
+    }
 }
 
 function generateGrid(){
@@ -37,11 +47,13 @@ function clearGrid(){
 
 grid.addEventListener("mouseover", (event) => {
     if (event.target.classList.contains("gridItem")) {
-        const RandomColor = event.target.style.backgroundColor || Math.floor(Math.random()*16777215).toString(16);
-        let opacity = parseFloat(event.target.style.opacity) || 0;
-        console.log(opacity);
-        event.target.style.backgroundColor = `#${RandomColor}`;
-        event.target.style.opacity = Math.min(opacity + 0.25, 1);
+        if(isDrawing){
+            const RandomColor = event.target.style.backgroundColor || Math.floor(Math.random()*16777215).toString(16);
+            let opacity = parseFloat(event.target.style.opacity) || 0;
+            console.log(opacity);
+            event.target.style.backgroundColor = `#${RandomColor}`;
+            event.target.style.opacity = Math.min(opacity + 0.25, 1);
+        }
     }
 });
 
