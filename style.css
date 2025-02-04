@@ -1,7 +1,7 @@
 * {
     margin: 0px;
     padding: 0px;
-    box-sizing: border-box;
+    font-family:'Courier New', Courier, monospace;
 }
 
 .main {
@@ -36,8 +36,11 @@
 }
 
 .gridItem {
-    aspect-ratio: 1/1;
-    border: 1 px solid rgb(215, 215, 215);
+    display: flex;
+    box-sizing: border-box;
+    flex: 1 1 auto;
+    border: 1px solid rgb(226, 232, 234);
+    opacity: 0;
 }
 
 button {
