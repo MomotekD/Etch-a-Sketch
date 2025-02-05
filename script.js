@@ -47,6 +47,7 @@ function clearGrid(){
 
 grid.addEventListener("mouseover", (event) => {
     if (event.target.classList.contains("gridItem")) {
+        grid.addEventListener("mousedown", startDrawing);
         if(isDrawing){
             const RandomColor = event.target.style.backgroundColor || Math.floor(Math.random()*16777215).toString(16);
             let opacity = parseFloat(event.target.style.opacity) || 0;
@@ -54,6 +55,7 @@ grid.addEventListener("mouseover", (event) => {
             event.target.style.backgroundColor = `#${RandomColor}`;
             event.target.style.opacity = Math.min(opacity + 0.25, 1);
         }
+        grid.addEventListener("mouseup", startDrawing);
     }
 });
 
